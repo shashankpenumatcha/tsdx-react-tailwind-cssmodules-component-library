@@ -79,9 +79,19 @@ export const PepComponent: React.FC<PepComponentProps> = ({ stateToRender, onTab
     flexDirection: 'row',
   };
 
+  const btnStyle: CSSProperties = {
+    borderRadius:'9999px',
+    backgroundColor: 'rgb(6 182 212/var(--tw-bg-opacity))',
+    fontWeight:'600',
+    fontSize: '.875rem',
+    padding:'12px',
+    border: '1px solid lightgrey'
+  }
+
   // loader
 
   const columnHeader: string[] = ['Name', 'Email', 'Address', 'Website', 'Company'];
+  
 
   /* const onTableClicked = (emitteddata:any) => {
     console.log('emitted data from table', emitteddata);
@@ -90,6 +100,7 @@ export const PepComponent: React.FC<PepComponentProps> = ({ stateToRender, onTab
 
   return (
     <div className="pep-container" style={pepContainer}>
+
       {stateToRender === 'Default State' && (
         <>
           <div className="header-title" style={pepHeaderContainer}>
