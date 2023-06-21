@@ -40,22 +40,6 @@ export const PepComponent: React.FC<PepComponentProps> = ({ stateToRender, onTab
     gridTemplateColumns: '1fr 1fr 1fr',
   };
 
-  const pepHeader: CSSProperties = {
-    fontFamily: 'inter',
-    fontSize: '24px',
-    fontWeight: '700',
-    lineHeight: '32px',
-    color: '#181818',
-    fontStyle: 'normal',
-    // font-family: 'Inter';
-    // font-style: normal;
-    // font-weight: 700;
-    // font-size: 24px;
-    // line-height: 32px;
-    // /* identical to box height, or 133% */
-    // color: #181818;
-  };
-
   const pepHeaderContainer: CSSProperties = {
     margin: '32px 0px',
   };
@@ -103,8 +87,8 @@ export const PepComponent: React.FC<PepComponentProps> = ({ stateToRender, onTab
 
       {stateToRender === 'Default State' && (
         <>
-          <div className="header-title" style={pepHeaderContainer}>
-            <h1 style={pepHeader}>PEP Profile</h1>
+          <div className={"my-8"}>
+            <h1 className={'text-[24px] font-inter font-extrabold'}>PEP Profile</h1>
           </div>
           <div className="component-to-render" style={{ height: '353px', overflow: 'hidden' }}>
             <LiveTable columnHeader={columnHeader} data={data} onClickItem={onTableClicked} />
@@ -117,8 +101,8 @@ export const PepComponent: React.FC<PepComponentProps> = ({ stateToRender, onTab
       {stateToRender === 'Zero State' && (
         <>
           <div className="no-pep" style={noPep}>
-            <div className="header-title" style={pepHeaderContainer}>
-              <h1 style={pepHeader}>PEP Profile</h1>
+            <div className={"my-8"}>
+              <h1 className={'text-[24px] font-inter font-extrabold'}>PEP Profile</h1>
             </div>
             <div className="check-mark" style={{ display: 'flex', gap: '12px', justifyContent: 'center', margin: '32px 0px' }}>
               <svg

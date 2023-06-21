@@ -2,13 +2,14 @@ import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {Card, PepComponent, Wrapper} from '../.';
+
 const App = () => {
   const [enabled, setEnabled] = React.useState(false);
   const [value, setValue] = React.useState('Loading State')
 
   const getWrapperState = (state) => {
     console.log('get wrappeer state ', state)
-    setValue(state)
+    setValue(state) 
   }
 
   return (
