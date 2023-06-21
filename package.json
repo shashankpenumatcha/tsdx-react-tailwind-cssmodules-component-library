@@ -11,7 +11,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "npm run build && tsdx watch",
     "build": "tsdx build && npm pack",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
@@ -53,6 +53,7 @@
     "@types/react-dom": "^18.2.5",
     "autoprefixer": "^10.4.14",
     "husky": "^8.0.3",
+    "parcel": "1.12.3",
     "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -66,6 +67,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
-    "beroe-shared-components": "file:beroe-shared-components-0.0.0.tgz"
+    "beroe-shared-components": "file:beroe-shared-components-0.0.0.tgz",
+    "react-app-polyfill": "^3.0.0"
   }
 }
